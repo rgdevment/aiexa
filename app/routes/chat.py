@@ -1,9 +1,11 @@
-from flask import request, jsonify
-from . import chat
-from ..utils.openai import generate_message
+from flask import Blueprint, request
+from app.utils.openai import generate_message
 
-@chat.route('/chat', methods=['POST'])
+chat_blueprint = Blueprint('chat', __name__)
+
+@chat_blueprint.route('/chat', methods=['POST'])
 def chat():
-    message = request.json.get('message', '')
+    data = request.get_json()
+    message = data.get('message', '')
     response = generate_message(message)
-    return jsonify(response=response)
+    return {'response': response}
