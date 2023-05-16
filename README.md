@@ -1,8 +1,8 @@
 
-# IN PROGRESS
+# In progress
 This project is still a baby. It sprouted from a spark of an idea, providing just a basic template and simple communication for now. We have heaps of development and growth ahead, so some things might not be quite up to speed yet. But with every change we make, we're taking one step closer to our goal. So, thanks for your patience and feedback! Together, we're going to help this little project grow up and reach its full potential.
 
-# ChatGPT API with Alexa
+# ChatGPT with Alexa
 
 This project integrates OpenAI's GPT-3 model with an Alexa Skill to create an interactive and engaging conversational agent. The application is written in Python using Flask for the API and the OpenAI API to interface with GPT-3.
 
