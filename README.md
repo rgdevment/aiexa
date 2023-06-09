@@ -1,37 +1,47 @@
+# Proyecto ChatGPT
 
-# In progress
-This project is still a baby. It sprouted from a spark of an idea, providing just a basic template and simple communication for now. We have heaps of development and growth ahead, so some things might not be quite up to speed yet. But with every change we make, we're taking one step closer to our goal. So, thanks for your patience and feedback! Together, we're going to help this little project grow up and reach its full potential.
+Este proyecto tiene como objetivo proporcionar una interfaz de chat fácil de usar con la API GPT-4 (o el algoritmo que desees) de OpenAI. Permite a los usuarios obtener respuestas generadas por inteligencia artificial a consultas de texto que se basan en una serie de prompts o instrucciones predefinidos, llamados "templates". Esto permite tener un control más preciso sobre el tipo de respuestas que el modelo de IA genera, haciendo que la conversación sea más coherente y útil.
 
-# ChatGPT with Alexa
+## Funcionalidad Principal
 
-This project integrates OpenAI's GPT-3 model with an Alexa Skill to create an interactive and engaging conversational agent. The application is written in Python using Flask for the API and the OpenAI API to interface with GPT-3.
+La funcionalidad principal de este proyecto es transformar prompts o instrucciones específicos en respuestas generadas por IA. Cada prompt o instrucción se basa en un "template" que determina la estructura y el estilo de la respuesta generada.
 
-## Getting Started
+Por ejemplo, si tu template se estructura como un informe diario de trabajo, puedes introducir un texto en bruto que describa tus actividades del día, y la aplicación generará una respuesta que encaje en el formato de un informe diario de trabajo.
 
-### Prerequisites
+## Requisitos
 
-- Python 3.8 or later
-- Conda package manager
-- OpenAI API key
+- Python 3.6+
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+- [OpenAI Python](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_generate_text_with_GPT3_or_Davinci_Codex.md)
+- [python-dotenv](https://pypi.org/project/python-dotenv/)
 
-### Installation
+Estas dependencias se pueden instalar ejecutando:
 
-1. Clone the repository
-2. Navigate to the project directory and create a new Conda environment: conda create --name myenv python=3.8
-3. Activate the Conda environment: conda activate myenv
-4. Install the required dependencies: pip install -r requirements.txt
-5. move a `.env.dist` file to `.env` and add your OpenAI API key: OPENAI_KEY=YOUR-KEY_OPENIA
+```bash
+pip install -r requirements.txt
+```
 
-## Running the Application
+## Configuración
 
-To run the application, execute the following command in the root of your project: `python run.py` 
+1. Clona este repositorio en tu máquina local.
+2. Crea un archivo `.env` en el directorio raíz del proyecto y añade tu clave de API de OpenAI. Debería verse algo así:
 
-The Flask server will start and listen for incoming connections. You can now use the API endpoint (`http://localhost:5000/chat`) to communicate with the GPT-3 model.
+   ```
+   OPENAI_KEY=your-openai-key-here
+   ```
 
-## Author
+## Uso
 
-Mario Hidalgo G.
+1. Inicia la aplicación Flask ejecutando `python run.py`.
+2. La aplicación estará disponible en `http://localhost:5000`.
+3. Para enviar una solicitud de chat a la API, realiza una solicitud POST a `http://localhost:5000/chat` con un cuerpo JSON que contenga un campo `message` y un campo `template_name`. Por ejemplo:
 
-## License
+   ```bash
+   curl -X POST -H "Content-Type: application/json" -d '{"message":"Hola Mundo", "template_name":"daily"}' http://127.0.0.1:5000/chat
+   ```
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+4. También puedes interactuar con el chatbot a través de la interfaz gráfica del usuario visitando `http://localhost:5000/gui` en tu navegador.
+
+## Licencia
+
+Este proyecto se encuentra bajo la [licencia MIT](https://opensource.org/licenses/MIT).
