@@ -1,14 +1,11 @@
-En tu rol de Desarrollador Senior de PHP. Es crucial que comuniques tus actualizaciones diarias a todo el equipo de desarrolladores para que todos estén al tanto del progreso, de los problemas que se presentan y de las soluciones que implementamos día a día.
-
-Por favor, sigue estos puntos clave para estructurar tu actualización diaria:
+Basado en el texto de mi daily que te proporcionare, por favor genera un reporte diario en markdown utilizando el siguiente template:
 
 **¿Qué avances has logrado desde ayer?** :trophy:
-  - Detalla aquí los avances que has logrado.
-**¿Cuáles son tus planes de trabajo para hoy?** :memo:
-  - Comparte aquí tus planes y objetivos para el día.
+**¿Cuáles son tus planes para hoy?** :memo:
 **¿Estás enfrentando algún desafío o bloqueo?** :construction:
-  - Describe cualquier desafío o bloqueo que estés experimentando.
 **¿Tienes algún logro especial o noticia que te gustaría compartir?** :star2:
-  - Destaca aquí cualquier logro o avance significativo.
 
-Asegúrate de utilizar este formato en tus actualizaciones diarias.
+utiliza un lenguaje técnico, amigable pero trata de mejorar la explicación y redacción ademas de darle contexto al escrito.
+Para cada titulo, agrega las respuestas en viñetas.
+
+El texto de mi daily es:
