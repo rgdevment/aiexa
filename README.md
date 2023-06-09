@@ -1,4 +1,4 @@
-# Proyecto ChatGPT
+# Proyecto Guy-Yitipi
 
 Este proyecto tiene como objetivo proporcionar una interfaz de chat fácil de usar con la API GPT-4 (o el algoritmo que desees) de OpenAI. Permite a los usuarios obtener respuestas generadas por inteligencia artificial a consultas de texto que se basan en una serie de prompts o instrucciones predefinidos, llamados "templates". Esto permite tener un control más preciso sobre el tipo de respuestas que el modelo de IA genera, haciendo que la conversación sea más coherente y útil.
 
@@ -37,10 +37,10 @@ pip install -r requirements.txt
 3. Para enviar una solicitud de chat a la API, realiza una solicitud POST a `http://localhost:5000/chat` con un cuerpo JSON que contenga un campo `message` y un campo `template_name`. Por ejemplo:
 
    ```bash
-   curl -X POST -H "Content-Type: application/json" -d '{"message":"Hola Mundo", "template_name":"daily"}' http://127.0.0.1:5000/chat
+   curl -X POST -H "Content-Type: application/json" -d '{"message":"Una idea para un buen template", "template_name":"daily"}' http://127.0.0.1:5000/chat
    ```
 
-4. También puedes interactuar con el chatbot a través de la interfaz gráfica del usuario visitando `http://localhost:5000/gui` en tu navegador.
+4. También puedes interactuar con el chatbot a través de la interfaz gráfica del usuario visitando `http://localhost:5000/guy` en tu navegador.
 
 ## Licencia
 
