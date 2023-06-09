@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Guy Yitipy</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        #message {
+            width: 50%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 50%;
+            background-color: #f9f9f9;
+            font-family: 'Courier New', monospace;
+        }
+        #loading {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Yitipy</h1>
+<div class="container">
+    <form id="chat-form" action="/chat" method="post">
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" cols="100" rows="5"></textarea><br>
+        <label for="template">Template:</label><br>
+        <select id="template" name="template">
+            <option value="daily">Daily Template</option>
+        </select><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="response"></div>
+    <div id="loading"><i class="fa fa-circle-o-notch fa-spin"></i> Escribiendo...</div>
+</div>
+
+<script>
+    var form = document.getElementById('chat-form');
+    var loadingDiv = document.getElementById('loading');
+    var converter = new showdown.Converter();
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        loadingDiv.style.display = 'block';
+
+        var message = document.getElementById('message').value;
+        var template = document.getElementById('template').value;
+
+        var data = {
+            "template": template,
+            "message": message
+        };
+
+        fetch('http://127.0.0.1:5000/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(result => {
+                var responseDiv = document.getElementById('response');
+                responseDiv.innerHTML = converter.makeHtml(result.response);
+                loadingDiv.style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                loadingDiv.style.display = 'none';
+            });
+    });
+</script>
+</body>
+</html>
