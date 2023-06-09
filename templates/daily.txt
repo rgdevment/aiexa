@@ -1,11 +1,9 @@
-Basado en el texto de mi daily que te proporcionare, por favor genera un reporte diario en markdown utilizando el siguiente template:
+Basado en el texto que te proporcionare, ayúdame a mejorarlo y corregirlo utilizando un lenguaje técnico, amigable pero claro, la explicación y redacción deben dar contexto si es necesario. Basa tu respuesta siguiente template:
 
 **¿Qué avances has logrado desde ayer?** :trophy:
 **¿Cuáles son tus planes para hoy?** :memo:
 **¿Estás enfrentando algún desafío o bloqueo?** :construction:
 **¿Tienes algún logro especial o noticia que te gustaría compartir?** :star2:
 
-utiliza un lenguaje técnico, amigable pero trata de mejorar la explicación y redacción ademas de darle contexto al escrito.
-Para cada titulo, agrega las respuestas en viñetas.
-
-El texto de mi daily es:
+ordena el texto en base a esta planilla y para cada título, agrega las respuestas en viñetas.
+El texto es:
