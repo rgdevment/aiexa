@@ -1,6 +1,6 @@
 # Proyecto Guy-Yitipi
 
-Este proyecto tiene como objetivo proporcionar una interfaz de chat fácil de usar con la API GPT-4 (o el algoritmo que desees) de OpenAI. Permite a los usuarios obtener respuestas generadas por inteligencia artificial a consultas de texto que se basan en una serie de prompts o instrucciones predefinidos, llamados "templates". Esto permite tener un control más preciso sobre el tipo de respuestas que el modelo de IA genera, haciendo que la conversación sea más coherente y útil.
+Este proyecto tiene como objetivo proporcionar un api para comunicarlo con otro proyecto llamado aiexa, pero mientras tanto proporciona una interfaz de chat sencilla de usar con la API GPT-4 (o el algoritmo que desees) de OpenAI. Permite a los usuarios obtener respuestas generadas por consultas de texto que se basan en una serie de prompts o instrucciones predefinidos, llamados "templates". Esto permite tener un control más preciso sobre el tipo de respuestas que el modelo de IA genera, haciendo que la conversación sea más coherente y útil.
 
 ## Funcionalidad Principal
 
