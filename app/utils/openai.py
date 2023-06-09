@@ -10,7 +10,7 @@ def generate_message(prompt):
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=prompt,
-        temperature=0.5,
-        max_tokens=300
+        temperature=1,
+        max_tokens=500
     )
     return response.choices[0].text.strip()
