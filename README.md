@@ -1,12 +1,16 @@
-# Proyecto Guy-Yitipi
+# Proyecto Yitipi
 
-Este proyecto tiene como objetivo proporcionar un api para comunicarlo con otro proyecto llamado aiexa, pero mientras tanto proporciona una interfaz de chat sencilla de usar con la API GPT-4 (o el algoritmo que desees) de OpenAI. Permite a los usuarios obtener respuestas generadas por consultas de texto que se basan en una serie de prompts o instrucciones predefinidos, llamados "templates". Esto permite tener un control más preciso sobre el tipo de respuestas que el modelo de IA genera, haciendo que la conversación sea más coherente y útil.
+¡Hola! Aunque no soy un programador de Python, decidí sumergirme en esta aventura como un nuevo hobby para mantenerme activo y aprender algo nuevo. Es mi primer contacto con el lenguaje y, aunque aún estoy aprendiendo, si este proyecto ayuda aunque sea a una persona, me sentiré más que satisfecho.
+
+Yitipi es una aventura que he iniciado con el objetivo de desarrollar una API que pueda dialogar con otro proyecto en proceso, llamado "Aiexa". Aiexa está diseñado para trabajar con ChatGPT en Alexa. Sin embargo, como Aiexa aún está en las primeras etapas de desarrollo, Yitipi no se queda de brazos cruzados.
+
+En su versión actual, Yitipi es una interfaz de chat fácil de usar con la API GPT-3.5 (o cualquier otro algoritmo que prefieras) de OpenAI. Permite a los usuarios obtener respuestas generadas a partir de consultas de texto, que se basan en una serie de instrucciones o "prompts" predefinidos, a los que nos referimos como "templates". Así, puedes tener un control más preciso sobre el tipo de respuestas que genera el modelo de IA, manteniendo la conversación coherente y útil.
 
 ## Funcionalidad Principal
 
-La funcionalidad principal de este proyecto es transformar prompts o instrucciones específicos en respuestas generadas por IA. Cada prompt o instrucción se basa en un "template" que determina la estructura y el estilo de la respuesta generada.
+El corazón de este proyecto es convertir prompts específicos en respuestas generadas por IA. Cada prompt se basa en un "template" que moldea la estructura y el estilo de la respuesta generada.
 
-Por ejemplo, si tu template se estructura como un informe diario de trabajo, puedes introducir un texto en bruto que describa tus actividades del día, y la aplicación generará una respuesta que encaje en el formato de un informe diario de trabajo.
+Para poner un ejemplo sencillo, digamos que tienes un template estructurado como un informe diario de trabajo. Si introduces un texto en bruto que describe tus actividades del día, la aplicación generará una respuesta que se ajuste al formato de dicho informe. ¡Así de fácil!
 
 ## Requisitos
 
@@ -41,7 +45,3 @@ pip install -r requirements.txt
    ```
 
 4. También puedes interactuar con el chatbot a través de la interfaz gráfica del usuario visitando `http://localhost:5000/guy` en tu navegador.
-
-## Licencia
-
-Este proyecto se encuentra bajo la [licencia MIT](https://opensource.org/licenses/MIT).
